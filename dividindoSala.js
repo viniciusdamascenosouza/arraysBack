@@ -31,3 +31,6 @@ console.log(
 console.log(
     `Os alunos da sala 2 são: ${sala2}.`
 );
+
+
+//OBS: método slice não altera o array original

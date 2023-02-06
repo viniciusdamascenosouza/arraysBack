@@ -5,9 +5,14 @@ const listaDeAlunosEMedias = [alunos, medias];
 
 function exibeNomeENota(aluno) {
     if(listaDeAlunosEMedias[0].includes(aluno)) {
-        const indice = listaDeAlunosEMedias[0].indexOf(aluno);
+        // const alunos = listaDeAlunosEMedias[0];
+        // const medias = listaDeAlunosEMedias[1];
+        // SINTAXE ABAIXO CRIA DUAS CONST EM UMA SÓ LINHA COHECIDA COMO DESESTRUTURAÇÃO DE LISTAS
+        const [alunos, medias] = listaDeAlunosEMedias;
 
-        const mediaDoAluno = listaDeAlunosEMedias[1][indice];
+        const indice = alunos.indexOf(aluno);
+
+        const mediaDoAluno = medias[indice];
 
         console.log(`${aluno} tem a média ${mediaDoAluno}.`)
 
